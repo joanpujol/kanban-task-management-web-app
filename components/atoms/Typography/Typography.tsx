@@ -2,21 +2,24 @@
 
 import React from "react";
 import * as S from "./Typography.styles";
+import { TypographySize, TypographyVariant } from "./Typography.types";
 
 type Props =
   | {
-      variant: "Heading";
-      size: "s" | "m" | "l" | "xl";
+      variant: Extract<TypographyVariant, 'Heading'>;
+      size: TypographySize;
+      bold?: boolean;
       children: React.ReactNode;
     }
   | {
-      variant: "Body";
-      size: "m" | "l";
+      variant: Extract<TypographyVariant, 'Body'>;
+      size: Extract<TypographySize, 'md' | 'lg'>;
+      bold?: boolean;
       children: React.ReactNode;
     };
 
-export const Typography = ({ variant = "Body", size, children }: Props) => {
+export const Typography = ({ variant = "Body", size, bold, children }: Props) => {
   // @ts-ignore: Types are correct, but TS doesn't like it
-  const element = variant === "Heading" ? S.Heading(size) : S.Body(size);
+  const element = variant === "Heading" ? S.Heading(size) : S.Body(size, bold);
   return React.createElement(element, {}, children);
 };

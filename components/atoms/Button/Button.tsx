@@ -1,17 +1,29 @@
-'use client'
+"use client";
 
+import { Typography } from "../Typography/Typography";
+import * as S from "./Button.styles";
+import { ButtonSize, ButtonVariant } from "./Button.types";
 
-import styled from "styled-components";
-import { breakpoints } from "../../../styles/breakpoints";
+type Props = {
+  variant: ButtonVariant;
+  size: ButtonSize;
+  children: React.ReactNode;
+};
 
-
-const Button = styled.button`
-  background-color: ${props => props.theme.colors.main};
-  border: 1px solid #000;
-
-  @media ${breakpoints.mobile} {
-    background-color: red;
-  }
-`;
+export const Button = ({ variant, size, children }: Props) => {
+  return (
+    <S.StyledButton $variant={variant} $size={size}>
+      {size === "lg" ? (
+        <Typography variant="Heading" size="md">
+          {children}
+        </Typography>
+      ) : (
+        <Typography variant="Body" size="lg" bold>
+          {children}
+        </Typography>
+      )}
+    </S.StyledButton>
+  );
+};
 
 export default Button;

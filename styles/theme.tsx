@@ -14,9 +14,11 @@ const colors = {
   linesLight: "#E4EBFA",
   red: "#EA5555",
   redHover: "#FF9898",
+  secondary: "rgba(99, 95, 199, 0.1)",
+  secondaryHover: "rgba(99, 95, 199, 0.25)",
 };
 
-interface ThemeInterface {
+export interface ThemeInterface {
   colors: {
     main: string;
     mainHover: string;
@@ -30,6 +32,8 @@ interface ThemeInterface {
     linesDark: string;
     red: string;
     redHover: string;
+    secondary: string;
+    secondaryHover: string;
   };
   theme: {
     background: {
@@ -38,6 +42,18 @@ interface ThemeInterface {
     };
     text: {
       primary: string;
+    };
+    button: {
+      color: {
+        primary: string;
+        secondary: string;
+        destructive: string;
+      };
+      hover: {
+        primary: string;
+        secondary: string;
+        destructive: string;
+      };
     };
   };
 }
@@ -54,6 +70,18 @@ const lightTheme: ThemeInterface = {
     text: {
       primary: colors.black,
     },
+    button: {
+      color: {
+        primary: colors.main,
+        secondary: colors.secondary,
+        destructive: colors.red,
+      },
+      hover: {
+        primary: colors.mainHover,
+        secondary: colors.secondaryHover,
+        destructive: colors.redHover,
+      },
+    },
   },
 };
 
@@ -69,14 +97,34 @@ const darkTheme: ThemeInterface = {
     text: {
       primary: colors.white,
     },
+    button: {
+      color: {
+        primary: colors.main,
+        secondary: colors.white,
+        destructive: colors.red,
+      },
+      hover: {
+        primary: colors.mainHover,
+        secondary: colors.white,
+        destructive: colors.redHover,
+      },
+    },
   },
 };
 
-export const Theme = ({ theme, children }: { theme: 'light' | 'dark', children: React.ReactNode }) => {
+export const Theme = ({
+  theme,
+  children,
+}: {
+  theme: "light" | "dark";
+  children: React.ReactNode;
+}) => {
   return (
     <>
       <GlobalStyle />
-      <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>{children}</ThemeProvider>
+      <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
+        {children}
+      </ThemeProvider>
     </>
   );
 };

@@ -6,9 +6,11 @@ export default function HomePage() {
   return (
     <Layout>
       <h1>Home</h1>
-      <Button>Hello</Button>
-      <Typography variant="Body" size="l">Hello</Typography>
-      <Typography variant="Body" size="m">Hello</Typography>
+      <Button variant="primary" size="lg">Hello</Button>
+      <Button variant="secondary" size="sm">Hello</Button>
+      <Button variant="destructive" size="sm">Hello</Button>
+      <Typography variant="Body" size="lg" bold>Hello</Typography>
+      <Typography variant="Body" size="md">Hello</Typography>
     </Layout>
   )
 }

@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { TypographySize } from "./Typography.types";
 
-export const Heading = ($size: 's' | 'm' | 'l' | 'xl') => {
+export const Heading = ($size: TypographySize) => {
   const headings = {
     xl: styled.h1`
       color: ${({ theme }) => theme.colors.black};
@@ -8,19 +9,19 @@ export const Heading = ($size: 's' | 'm' | 'l' | 'xl') => {
       font-size: 24px;
       line-height: 30px;
     `,
-    l: styled.h2`
+    lg: styled.h2`
       color: ${({ theme }) => theme.colors.black};
       font-weight: 700;
       font-size: 18px;
       line-height: 23px;
     `,
-    m: styled.h3`
+    md: styled.h3`
       color: ${({ theme }) => theme.colors.black};
       font-weight: 700;
       font-size: 15px;
       line-height: 19px;
     `,
-    s: styled.h4`
+    sm: styled.h4`
       color: ${({ theme }) => theme.colors.mediumGrey};
       font-weight: 700;
       font-size: 12px;
@@ -31,15 +32,15 @@ export const Heading = ($size: 's' | 'm' | 'l' | 'xl') => {
   return headings[$size];
 };
 
-export const Body = ($size: 'm' | 'l') => {
+export const Body = ($size: Extract<TypographySize, 'md' | 'lg'>, $bold?: boolean) => {
   const bodies = {
-    l: styled.p`
+    lg: styled.p`
       color: ${({ theme }) => theme.colors.darkGrey};
-      font-weight: 500;
+      font-weight: ${$bold ? 700 : 500};
       font-size: 13px;
       line-height: 23px;
     `,
-    m: styled.p`
+    md: styled.p`
       color: ${({ theme }) => theme.colors.darkGrey};
       font-weight: 700;
       font-size: 12px;
