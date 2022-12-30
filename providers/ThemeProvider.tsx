@@ -21,13 +21,13 @@ const theme: ThemeInterface = {
 }
 
 export const Theme = ({ children }: {children: React.ReactNode} ) => {
-    return (
-        <>
-            <GlobalStyle />
-            <ThemeProvider theme={theme}>
-                {children}
-            </ThemeProvider>
-        </>
-    )
+  return (
+    <>
+      <GlobalStyle />
+      <ThemeProvider theme={theme}>
+        {children}
+      </ThemeProvider>
+    </>
+  )
 }
 

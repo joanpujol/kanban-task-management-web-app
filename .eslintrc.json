@@ -1,3 +1,9 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": "next/core-web-vitals",
+  "rules": {
+    // Indent with 2 spaces
+    "indent": ["error", 2],
+    // Indent JSX with 2 spaces
+    "react/jsx-indent": ["error", 2]
+  }
 }
