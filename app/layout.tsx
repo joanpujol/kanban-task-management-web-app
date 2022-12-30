@@ -1,18 +1,21 @@
 "use client"
 
 
-import { Theme } from "../providers/ThemeProvider"
+import { useState } from "react"
+import { Theme } from "../styles/theme"
 
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
+  const [theme, ] = useState<"light" | "dark">("light")
+
   return (
     <html>
       <head />
       <body>
-        <Theme>
+        <Theme theme={theme}>
           {children}
         </Theme>
       </body>
