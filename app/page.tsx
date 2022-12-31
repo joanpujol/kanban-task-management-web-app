@@ -1,16 +1,16 @@
-import Button from "../components/atoms/Button/Button";
-import { Typography } from "../components/atoms/Typography/Typography";
+import { Button } from "../components/atoms/Button/Button";
+import { Text } from "../components/atoms/Typography/Text";
 import Layout from "./layout";
 
 export default function HomePage() {
   return (
     <Layout>
-      <h1>Home</h1>
-      <Button variant="primary" size="lg">Hello</Button>
-      <Button variant="secondary" size="sm">Hello</Button>
-      <Button variant="destructive" size="sm">Hello</Button>
-      <Typography variant="Body" size="lg" bold>Hello</Typography>
-      <Typography variant="Body" size="md">Hello</Typography>
+      <Button variant="primary" size="lg">Button Primary</Button>
+      <Button variant="primary" size="sm">Button Primary</Button>
+      <Button variant="secondary" size="sm">Button Secondary</Button>
+      <Button variant="destructive" size="sm">Button Destructive</Button>
+      <Text size="lg" bold>Hello</Text>
+      <Text size="md">Hello</Text>
     </Layout>
   )
 }

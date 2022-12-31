@@ -1,6 +1,7 @@
 "use client";
 
-import { Typography } from "../Typography/Typography";
+import { Header } from "../Typography/Header";
+import { Text } from "../Typography/Text";
 import * as S from "./Button.styles";
 import { ButtonSize, ButtonVariant } from "./Button.types";
 
@@ -14,13 +15,13 @@ export const Button = ({ variant, size, children }: Props) => {
   return (
     <S.StyledButton $variant={variant} $size={size}>
       {size === "lg" ? (
-        <Typography variant="Heading" size="md">
+        <Header size="md">
           {children}
-        </Typography>
+        </Header>
       ) : (
-        <Typography variant="Body" size="lg" bold>
+        <Text size="lg" bold>
           {children}
-        </Typography>
+        </Text>
       )}
     </S.StyledButton>
   );
