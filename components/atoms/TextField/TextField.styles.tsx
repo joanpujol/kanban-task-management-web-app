@@ -4,7 +4,7 @@ import { getTextStyles } from "../Typography/Text.styles";
 
 export const StyledTextField = styled.input.attrs({ type: 'text' })`
   width: 100%;
-  padding: ${({ theme }) => theme.spacing.sm} ${({ theme }) => theme.spacing.md};
+  padding: ${({ theme }) => theme.spacing.xs} ${({ theme }) => theme.spacing.md};
   border: 1px solid ${({ theme }) => theme.colors.mediumGreyDimmed};
   border-radius: ${({ theme }) => theme.borderRadius.md};
   position: relative;

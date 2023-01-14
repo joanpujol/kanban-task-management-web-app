@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { textStylesMd } from "../Typography/Text.styles";
+import { getTextStyles } from "../Typography/Text.styles";
 
 export const CheckboxContainer = styled.div`
   display: flex;
@@ -17,7 +17,7 @@ export const CheckboxContainer = styled.div`
 `
   
 export const CheckboxSpan = styled.span<{$checked: boolean}>`
-  ${textStylesMd}
+  ${getTextStyles("md", false)}
 
   ${({ $checked, theme: { theme } }) => $checked && `
     & {

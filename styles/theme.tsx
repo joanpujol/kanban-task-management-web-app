@@ -25,6 +25,7 @@ const colors = {
 
 const measures = {
   spacing: {
+    lg: "32px",
     md: "16px",
     sm: "12px",
     xs: "8px",
@@ -66,6 +67,7 @@ export interface ThemeInterface {
       primary: string;
       primaryDimmed: string;
       primaryVeryDimmed: string;
+      secondary: string;
     };
     button: {
       color: {
@@ -81,6 +83,7 @@ export interface ThemeInterface {
     };
   };
   spacing: {
+    lg: string;
     md: string;
     sm: string;
     xs: string;
@@ -104,6 +107,7 @@ const lightTheme: ThemeInterface = {
       primary: colors.black,
       primaryDimmed: colors.blackDimmed,
       primaryVeryDimmed: colors.blackVeryDimmed,
+      secondary: colors.mediumGrey,
     },
     button: {
       color: {
@@ -134,6 +138,7 @@ const darkTheme: ThemeInterface = {
       primary: colors.white,
       primaryDimmed: colors.whiteDimmed,
       primaryVeryDimmed: colors.whiteVeryDimmed,
+      secondary: colors.mediumGreyDimmed,
     },
     button: {
       color: {

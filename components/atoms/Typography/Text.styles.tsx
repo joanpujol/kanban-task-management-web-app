@@ -3,13 +3,6 @@
 import styled, { css } from "styled-components";
 import { TypographySize } from "./Typography.types";
 
-export const textStylesMd = css`
-  color: ${({ theme }) => theme.colors.darkGrey};
-  font-weight: 700;
-  font-size: 12px;
-  line-height: 15px;
-`;
-
 export const getTextStyles = (
   size: Extract<TypographySize, "md" | "lg">,
   bold: boolean | undefined
@@ -21,7 +14,12 @@ export const getTextStyles = (
       font-size: 13px;
       line-height: 23px;
     `,
-    md: textStylesMd,
+    md: css`
+      color: ${({ theme }) => theme.colors.darkGrey};
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 15px;
+    `,
   };
   return textStyles[size];
 };

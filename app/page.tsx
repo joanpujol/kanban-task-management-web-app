@@ -1,5 +1,8 @@
+"use client";
+
 import { Button } from "../components/atoms/Button/Button";
 import Checkbox from "../components/atoms/Checkbox/Checkbox";
+import { Dropdown } from "../components/atoms/Dropdown/Dropdown";
 import { TextField } from "../components/atoms/TextField/TextField";
 import { Text } from "../components/atoms/Typography/Text";
 import Layout from "./layout";
@@ -15,6 +18,7 @@ export default function HomePage() {
       <Text size="md">Hello</Text>
       <Checkbox />
       <TextField name="name" placeholder="Enter task name" />
+      <Dropdown options={["Todo", "Doing", "Done"]} eventHandler={(value) => console.log(value)} />
     </Layout>
   )
 }
