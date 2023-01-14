@@ -10,7 +10,7 @@ export const textStylesMd = css`
   line-height: 15px;
 `;
 
-const getTextStyles = (
+export const getTextStyles = (
   size: Extract<TypographySize, "md" | "lg">,
   bold: boolean | undefined
 ) => {
