@@ -5,10 +5,13 @@ const colors = {
   main: "#635FC7",
   mainHover: "#A8A4FF",
   black: "#000112",
+  blackDimmed: "rgba(0, 1, 18, 0.5)",
   white: "#FFFFFF",
+  whiteDimmed: "rgba(255, 255, 255, 0.5)",
   veryDarkGrey: "#20212C",
   darkGrey: "#2B2C37",
   mediumGrey: "#828FA3",
+  mediumGreyDimmed: "rgba(130, 143, 163, 0.25)",
   lightGrey: "#F4F7FD",
   linesDark: "#3E3F4E",
   linesLight: "#E4EBFA",
@@ -18,15 +21,29 @@ const colors = {
   secondaryHover: "rgba(99, 95, 199, 0.25)",
 };
 
+const measures = {
+  spacing: {
+    md: "16px",
+    sm: "12px",
+  },
+  borderRadius: {
+    md: "4px",
+    sm: "2px",
+  },
+}
+
 export interface ThemeInterface {
   colors: {
     main: string;
     mainHover: string;
     black: string;
+    blackDimmed: string;
     white: string;
+    whiteDimmed: string;
     veryDarkGrey: string;
     darkGrey: string;
     mediumGrey: string;
+    mediumGreyDimmed: string;
     lightGrey: string;
     linesLight: string;
     linesDark: string;
@@ -42,6 +59,7 @@ export interface ThemeInterface {
     };
     text: {
       primary: string;
+      primaryDimmed: string;
     };
     button: {
       color: {
@@ -56,6 +74,14 @@ export interface ThemeInterface {
       };
     };
   };
+  spacing: {
+    md: string;
+    sm: string;
+  },
+  borderRadius: {
+    md: string;
+    sm: string
+  }
 }
 
 const lightTheme: ThemeInterface = {
@@ -69,6 +95,7 @@ const lightTheme: ThemeInterface = {
     },
     text: {
       primary: colors.black,
+      primaryDimmed: colors.blackDimmed,
     },
     button: {
       color: {
@@ -83,6 +110,7 @@ const lightTheme: ThemeInterface = {
       },
     },
   },
+  ...measures
 };
 
 const darkTheme: ThemeInterface = {
@@ -96,6 +124,7 @@ const darkTheme: ThemeInterface = {
     },
     text: {
       primary: colors.white,
+      primaryDimmed: colors.whiteDimmed,
     },
     button: {
       color: {
@@ -110,6 +139,7 @@ const darkTheme: ThemeInterface = {
       },
     },
   },
+  ...measures
 };
 
 export const Theme = ({
