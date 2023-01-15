@@ -17,7 +17,7 @@ export const StyledDropboxWrapper = styled.div`
     position: absolute;
     height: 100%;
     right: 0;
-    width: ${({ theme }) => theme.spacing.lg};
+    width: ${({ theme }) => theme.spacing.xl};
     border-radius: ${({ theme }) => theme.borderRadius.md};
     pointer-events: none;
   }
@@ -32,7 +32,7 @@ export const StyledDropbox = styled.select`
   background-color: ${({ theme: { theme } }) => theme.background.primary};
   padding: ${({ theme }) => theme.spacing.xs}
     calc(
-      ${({ theme }) => theme.spacing.lg} + ${({ theme }) => theme.spacing.md}
+      ${({ theme }) => theme.spacing.xl} + ${({ theme }) => theme.spacing.md}
     )
     ${({ theme }) => theme.spacing.xs} ${({ theme }) => theme.spacing.md};
   border-radius: ${({ theme }) => theme.borderRadius.md};

@@ -25,7 +25,9 @@ const colors = {
 
 const measures = {
   spacing: {
-    lg: "32px",
+    xxl: "48px",
+    xl: "32px",
+    lg: "24px",
     md: "16px",
     sm: "12px",
     xs: "8px",
@@ -83,6 +85,8 @@ export interface ThemeInterface {
     };
   };
   spacing: {
+    xxl: string;
+    xl: string;
     lg: string;
     md: string;
     sm: string;
