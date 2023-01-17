@@ -3,7 +3,6 @@ import { StyledHeader3 } from "../../atoms/Typography/Header.styles";
 import { StyledText } from "../../atoms/Typography/Text.styles";
 
 export const TaskCardWrapper = styled.div`
-  width: 280px;
   background-color: ${({ theme: { theme } }) => theme.background.primary};
   padding: ${({ theme }) => theme.spacing.lg} ${({ theme }) => theme.spacing.md};
   border-radius: ${({ theme }) => theme.borderRadius.lg};

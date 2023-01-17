@@ -6,6 +6,7 @@ import { Dropdown } from "../components/atoms/Dropdown/Dropdown";
 import { NavigationMenu } from "../components/atoms/NavigationMenu/NavigationMenu";
 import { TextField } from "../components/atoms/TextField/TextField";
 import { Text } from "../components/atoms/Typography/Text";
+import { BoardColumn } from "../components/molecules/BoardColumn/BoardColumn";
 import { TaskCard } from "../components/molecules/TaskCard/TaskCard";
 import Layout from "./layout";
 
@@ -24,16 +25,28 @@ export default function HomePage() {
       <NavigationMenu isActive>+ Create new board</NavigationMenu>
       <NavigationMenu isAction>+ Create new board</NavigationMenu>
       <NavigationMenu>+ Create new board</NavigationMenu>
-      <TaskCard task={{
-        id: 1,
-        title: "Task title",
-        description: "Task description",
-        subtasks: [
-          { title: "Subtask 1", done: true },
-          { title: "Subtask 2", done: false },
-          { title: "Subtask 3", done: false },
-        ],
-      }} />
+      <BoardColumn name="TODO" tasks={[
+        {
+          id: 1,
+          title: "Task title",
+          description: "Task description",
+          subtasks: [
+            { title: "Subtask 1", done: true },
+            { title: "Subtask 2", done: false },
+            { title: "Subtask 3", done: false },
+          ],
+        },
+        {
+          id: 2,
+          title: "This is a task about something and its text is longer than the previous one",
+          description: "Task description",
+          subtasks: [
+            { title: "Subtask 1", done: false },
+            { title: "Subtask 2", done: false },
+            { title: "Subtask 3", done: false },
+          ],
+        },
+      ]} />
     </Layout>
   )
 }
