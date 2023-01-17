@@ -6,6 +6,7 @@ import { Dropdown } from "../components/atoms/Dropdown/Dropdown";
 import { NavigationMenu } from "../components/atoms/NavigationMenu/NavigationMenu";
 import { TextField } from "../components/atoms/TextField/TextField";
 import { Text } from "../components/atoms/Typography/Text";
+import { TaskCard } from "../components/molecules/TaskCard/TaskCard";
 import Layout from "./layout";
 
 export default function HomePage() {
@@ -23,6 +24,16 @@ export default function HomePage() {
       <NavigationMenu isActive>+ Create new board</NavigationMenu>
       <NavigationMenu isAction>+ Create new board</NavigationMenu>
       <NavigationMenu>+ Create new board</NavigationMenu>
+      <TaskCard task={{
+        id: 1,
+        title: "Task title",
+        description: "Task description",
+        subtasks: [
+          { title: "Subtask 1", done: true },
+          { title: "Subtask 2", done: false },
+          { title: "Subtask 3", done: false },
+        ],
+      }} />
     </Layout>
   )
 }

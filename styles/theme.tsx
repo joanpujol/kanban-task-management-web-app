@@ -33,6 +33,7 @@ const measures = {
     xs: "8px",
   },
   borderRadius: {
+    lg: "8px",
     md: "4px",
     sm: "2px",
   },
@@ -93,6 +94,7 @@ export interface ThemeInterface {
     xs: string;
   },
   borderRadius: {
+    lg: string;
     md: string;
     sm: string
   }
