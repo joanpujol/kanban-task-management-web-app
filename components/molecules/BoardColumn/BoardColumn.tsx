@@ -8,13 +8,14 @@ import * as S from "./BoardColumn.styles";
 type Props = {
   name: string;
   tasks: Task[];
+  color?: `#${string}`;
 };
 
-export const BoardColumn = ({ name, tasks }: Props) => {
+export const BoardColumn = ({ name, tasks, color }: Props) => {
   return (
     <S.BoardColumnWrapper>
       <S.BoardColumnHeader>
-        <Circle fillColor="#49C4E5" />
+        <Circle fillColor={color ?? "#49C4E5"} />
         <Header size="sm">{name}</Header>
       </S.BoardColumnHeader>
       <S.BoardColumnBody>
