@@ -1,6 +1,6 @@
 export type Subtask = {
-    title: string;
-    done: boolean;
+  title: string;
+  done: boolean;
 };
 
 export type Task = {

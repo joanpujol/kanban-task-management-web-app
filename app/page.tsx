@@ -7,7 +7,6 @@ import { NavigationMenu } from "../components/atoms/NavigationMenu/NavigationMen
 import { TextField } from "../components/atoms/TextField/TextField";
 import { Text } from "../components/atoms/Typography/Text";
 import { Board } from "../components/molecules/Board/Board";
-import { BoardColumn } from "../components/molecules/BoardColumn/BoardColumn";
 import Layout from "./layout";
 
 export default function HomePage() {

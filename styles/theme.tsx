@@ -66,6 +66,9 @@ export interface ThemeInterface {
       primary: string;
       secondary: string;
     };
+    border: {
+      primary: string;
+    }
     text: {
       primary: string;
       primaryDimmed: string;
@@ -109,6 +112,9 @@ const lightTheme: ThemeInterface = {
       primary: colors.white,
       secondary: colors.lightGrey,
     },
+    border: {
+      primary: colors.linesLight,
+    },
     text: {
       primary: colors.black,
       primaryDimmed: colors.blackDimmed,
@@ -139,6 +145,9 @@ const darkTheme: ThemeInterface = {
     background: {
       primary: colors.darkGrey,
       secondary: colors.veryDarkGrey,
+    },
+    border: {
+      primary: colors.linesDark,
     },
     text: {
       primary: colors.white,
