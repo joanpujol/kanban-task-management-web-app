@@ -5,6 +5,7 @@ export default function ExamplePage() {
   return (
     <Layout>
       <BoardPage />
+      <div id="portal" />
     </Layout>
   );
 }
