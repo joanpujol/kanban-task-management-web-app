@@ -16,22 +16,29 @@ export const StyledBoardLayout = styled.div`
 `;
 
 export const BoardLayoutMenu = styled.div`
-    grid-column: 1 / 2;
-    grid-row: span 2;
-    background-color: ${({ theme: { theme } }) => theme.background.primary};
-    border-right: 1px solid ${({ theme: { theme } }) => theme.border.primary};
+  grid-column: 1 / 2;
+  grid-row: span 2;
+  background-color: ${({ theme: { theme } }) => theme.background.primary};
+  border-right: 1px solid ${({ theme: { theme } }) => theme.border.primary};
 `;
 
 export const BoardLayoutHeader = styled.div`
-    grid-column: 2 / 3;
-    grid-row: 1 / 2;
-    background-color: ${({ theme: { theme } }) => theme.background.primary};
-    border-bottom: 1px solid ${({ theme: { theme } }) => theme.border.primary};
+  display: flex;
+  align-items: center;
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  padding: ${({ theme }) => theme.spacing.lg};
+  background-color: ${({ theme: { theme } }) => theme.background.primary};
+  border-bottom: 1px solid ${({ theme: { theme } }) => theme.border.primary};
+`;
+
+export const BoardLayoutHeaderActions = styled.div`
+  margin-left: auto;
 `;
 
 export const BoardLayoutBoard = styled.div`
-    grid-column: 2 / 3;
-    grid-row: 2 / 3;
-    background-color: ${({ theme: { theme } }) => theme.background.secondary};
-    padding: ${({ theme }) => theme.spacing.lg};
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  background-color: ${({ theme: { theme } }) => theme.background.secondary};
+  padding: ${({ theme }) => theme.spacing.lg};
 `;

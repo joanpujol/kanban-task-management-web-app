@@ -50,8 +50,7 @@ export const StyledButton = styled.button<{
   $variant: ButtonVariant;
   $size: ButtonSize;
 }>`
-  width: 255px;
-  padding: 0;
+  padding: 0 ${({ theme }) => theme.spacing.lg};
   border: none;
   ${({ theme, $variant, $size }) => css`
     ${getButtonVariants(theme)[$variant]}

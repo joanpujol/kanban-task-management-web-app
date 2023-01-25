@@ -8,16 +8,15 @@ import { ButtonSize, ButtonVariant } from "./Button.types";
 type Props = {
   variant: ButtonVariant;
   size: ButtonSize;
+  onClick?: () => void;
   children: React.ReactNode;
 };
 
-export const Button = ({ variant, size, children }: Props) => {
+export const Button = ({ variant, size, onClick, children }: Props) => {
   return (
-    <S.StyledButton $variant={variant} $size={size}>
+    <S.StyledButton $variant={variant} $size={size} onClick={onClick}>
       {size === "lg" ? (
-        <Header size="md">
-          {children}
-        </Header>
+        <Header size="md">{children}</Header>
       ) : (
         <Text size="lg" bold>
           {children}

@@ -33,7 +33,8 @@ const measures = {
     xs: "8px",
   },
   borderRadius: {
-    lg: "8px",
+    xl: "8px",
+    lg: "6px",
     md: "4px",
     sm: "2px",
   },

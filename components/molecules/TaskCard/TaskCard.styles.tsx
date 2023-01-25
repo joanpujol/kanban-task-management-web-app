@@ -4,8 +4,9 @@ import { StyledText } from "../../atoms/Typography/Text.styles";
 
 export const TaskCardWrapper = styled.div`
   background-color: ${({ theme: { theme } }) => theme.background.primary};
-  padding: ${({ theme }) => theme.spacing.lg} ${({ theme }) => theme.spacing.md};
-  border-radius: ${({ theme }) => theme.borderRadius.lg};
+  padding: ${({ theme }) => theme.spacing.lg} ${({ theme }) =>
+  theme.spacing.md};
+  border-radius: ${({ theme }) => theme.borderRadius.xl};
   box-shadow: 0px 4px 6px rgba(54, 78, 126, 0.101545);
 
   & ${StyledHeader3} {
