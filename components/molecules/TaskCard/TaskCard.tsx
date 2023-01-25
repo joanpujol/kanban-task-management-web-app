@@ -14,7 +14,7 @@ export const TaskCard = ({ task: { title, subtasks } }: Props) => {
   return (
     <S.TaskCardWrapper>
       <Header size="md">{title}</Header>
-      <Text size="md">
+      <Text size="md" bold>
         {subtasksCompleted} of {subtasks.length} subtasks
       </Text>
     </S.TaskCardWrapper>

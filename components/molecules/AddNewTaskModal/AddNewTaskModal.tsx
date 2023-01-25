@@ -1,5 +1,6 @@
 import { Modal } from "../../atoms/Modal/Modal";
 import { Header } from "../../atoms/Typography/Header";
+import { Text } from "../../atoms/Typography/Text";
 
 type Props = {
     open: boolean;
@@ -12,6 +13,7 @@ export const AddNewTaskModal = ({open, setOpen}: Props) => {
       <Header size={"xl"}>
         Add New Task
       </Header>
+      <Text size={"md"} dimmed>hello</Text>
     </Modal>
   );
 };
