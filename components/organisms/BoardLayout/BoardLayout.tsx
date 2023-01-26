@@ -5,7 +5,7 @@ import { Column } from "../../../data/models/Column";
 import Button from "../../atoms/Button/Button";
 import { Header } from "../../atoms/Typography/Header";
 import { AddNewTaskModal } from "../AddNewTaskModal/AddNewTaskModal";
-import { Board } from "../Board/Board";
+import { Board } from "../../molecules/Board/Board";
 import * as S from "./BoardLayout.styles";
 
 type Props = {

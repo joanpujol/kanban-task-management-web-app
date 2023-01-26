@@ -1,6 +1,6 @@
 "use client";
 
-import { BoardLayout } from "../components/molecules/BoardLayout/BoardLayout";
+import { BoardLayout } from "../components/organisms/BoardLayout/BoardLayout";
 
 const columns = [
   {

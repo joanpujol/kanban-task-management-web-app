@@ -9,7 +9,7 @@ export const StyledTextField = styled.input.attrs({ type: 'text' })`
   border-radius: ${({ theme }) => theme.borderRadius.md};
   position: relative;
 
-  ${getTextStyles("lg", false)}
+  ${getTextStyles("lg")}
 
   &::placeholder {
     color: ${({ theme }) => theme.colors.primaryVeryDimmed};

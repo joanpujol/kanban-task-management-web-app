@@ -49,7 +49,9 @@ const buttonSizes = {
 export const StyledButton = styled.button<{
   $variant: ButtonVariant;
   $size: ButtonSize;
+  $stretch?: boolean;
 }>`
+  width: ${({ $stretch }) => ($stretch ? "100%" : "auto")};
   padding: 0 ${({ theme }) => theme.spacing.lg};
   border: none;
   ${({ theme, $variant, $size }) => css`

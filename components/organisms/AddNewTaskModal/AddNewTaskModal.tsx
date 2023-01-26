@@ -1,6 +1,7 @@
 import { Modal } from "../../atoms/Modal/Modal";
 import { Header } from "../../atoms/Typography/Header";
 import { Text } from "../../atoms/Typography/Text";
+import { DynamicInputList } from "../../molecules/DynamicInputList/DynamicInputList";
 
 type Props = {
     open: boolean;
@@ -14,6 +15,7 @@ export const AddNewTaskModal = ({open, setOpen}: Props) => {
         Add New Task
       </Header>
       <Text size={"md"} dimmed>hello</Text>
+      <DynamicInputList />
     </Modal>
   );
 };
