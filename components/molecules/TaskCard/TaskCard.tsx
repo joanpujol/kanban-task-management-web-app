@@ -10,7 +10,9 @@ type Props = {
 };
 
 export const TaskCard = ({ task: { title, subtasks } }: Props) => {
-  const subtasksCompleted = subtasks.filter((subtask) => subtask.done).length;
+  const subtasksCompleted = subtasks.filter(
+    (subtask) => subtask.isCompleted
+  ).length;
   return (
     <S.TaskCardWrapper>
       <Header size="md">{title}</Header>

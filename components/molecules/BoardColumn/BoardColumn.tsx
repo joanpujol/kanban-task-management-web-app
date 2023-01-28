@@ -20,7 +20,7 @@ export const BoardColumn = ({ name, tasks, color }: Props) => {
       </S.BoardColumnHeader>
       <S.BoardColumnBody>
         {tasks.map((task) => (
-          <TaskCard key={task.id} task={task} />
+          <TaskCard key={task.title} task={task} />
         ))}
       </S.BoardColumnBody>
     </S.BoardColumnWrapper>
