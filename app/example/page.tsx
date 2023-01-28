@@ -1,4 +1,4 @@
-import { BoardPage } from "../../pages/BoardPage";
+import { BoardPage } from "../../components/pages/BoardPage";
 import Layout from "../layout";
 
 export default function ExamplePage() {

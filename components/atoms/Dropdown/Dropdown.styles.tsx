@@ -24,7 +24,7 @@ export const StyledDropboxWrapper = styled.div`
 `;
 
 export const StyledDropbox = styled.select`
-  ${getTextStyles("lg", false)}
+  ${getTextStyles("lg")}
 
   width: 100%;
   height: 100%;

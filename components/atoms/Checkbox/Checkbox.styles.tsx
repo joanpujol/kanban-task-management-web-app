@@ -17,7 +17,7 @@ export const CheckboxContainer = styled.div`
 `
   
 export const CheckboxSpan = styled.span<{$checked: boolean}>`
-  ${getTextStyles("md", false)}
+  ${getTextStyles("md")}
 
   ${({ $checked, theme: { theme } }) => $checked && `
     & {

@@ -1,8 +1,8 @@
 "use client";
 
 import { shallow } from "zustand/shallow";
-import { BoardLayout } from "../components/organisms/BoardLayout/BoardLayout";
-import { useBoardStore } from "../data/store/Board.store";
+import { BoardLayout } from "../organisms/BoardLayout/BoardLayout";
+import { useBoardStore } from "../../data/store/Board.store";
 
 export const BoardPage = () => {
   const { boardState } = useBoardStore(
