@@ -6,14 +6,14 @@ import { TextField } from "../../atoms/TextField/TextField";
 import * as S from "./DynamicInputList.styles";
 
 type InputFields = {
-  title: string;
+  subtaskTitle: string;
   placeholder?: string;
 }[];
 
 export const DynamicInputList = () => {
   const [inputFields, setInputFields] = useState<InputFields>([
-    { title: "", placeholder: "e.g. Make coffee" },
-    { title: "", placeholder: "e.g. Drink coffee & smile" },
+    { subtaskTitle: "", placeholder: "e.g. Make coffee" },
+    { subtaskTitle: "", placeholder: "e.g. Drink coffee & smile" },
   ]);
 
   const handleInputChange = (
@@ -21,7 +21,7 @@ export const DynamicInputList = () => {
     event: React.ChangeEvent<HTMLInputElement>
   ) => {
     let data = [...inputFields];
-    data[index].title = event.target.value;
+    data[index].subtaskTitle = event.target.value;
     setInputFields(data);
   };
 
@@ -36,8 +36,8 @@ export const DynamicInputList = () => {
       {inputFields.map((input, index) => (
         <S.DynamicInput key={index}>
           <TextField
-            name={"title"}
-            value={input.title}
+            name={"subtaskTitle"}
+            value={input.subtaskTitle}
             placeholder={input.placeholder ?? "e.g. Another subtask"}
             onChange={(event) => handleInputChange(index, event)}
           />
@@ -47,7 +47,7 @@ export const DynamicInputList = () => {
         </S.DynamicInput>
       ))}
       <Button
-        onClick={() => setInputFields([...inputFields, { title: "" }])}
+        onClick={() => setInputFields([...inputFields, { subtaskTitle: "" }])}
         variant={"secondary"}
         size={"sm"}
         stretch

@@ -11,11 +11,28 @@ type Props = {
   stretch?: boolean;
   onClick?: () => void;
   children: React.ReactNode;
+  type?: "button" | "submit" | "reset";
+  form?: string;
 };
 
-export const Button = ({ variant, size, stretch, onClick, children }: Props) => {
+export const Button = ({
+  variant,
+  size,
+  stretch,
+  onClick,
+  type = "button",
+  form,
+  children,
+}: Props) => {
   return (
-    <S.StyledButton $variant={variant} $size={size} $stretch={stretch} onClick={onClick}>
+    <S.StyledButton
+      type={type}
+      form={form}
+      $variant={variant}
+      $size={size}
+      $stretch={stretch}
+      onClick={onClick}
+    >
       {size === "lg" ? (
         <Header size="md">{children}</Header>
       ) : (

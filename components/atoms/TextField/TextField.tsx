@@ -1,10 +1,10 @@
 "use client";
 
 type Props = {
-  name: string;
+  name?: string;
   placeholder?: string;
   value?: string;
-  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
 };
 
 import * as S from "./TextField.styles";

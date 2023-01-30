@@ -5,14 +5,14 @@ import * as S from "./Dropdown.styles";
 
 type Props = {
   options: string[];
-  eventHandler: (value: string) => void;
+  name?: string;
 };
 
 // TODO Implement pseudo-select to style dropdown according to design
-export const Dropdown = ({ options, eventHandler }: Props) => {
+export const Dropdown = ({ options, name }: Props) => {
   return (
     <S.StyledDropboxWrapper>
-      <S.StyledDropbox onChange={(e) => eventHandler(e.target.value)}>
+      <S.StyledDropbox name={name}>
         {options.map((option) => (
           // eslint-disable-next-line react/jsx-key
           <option value={option}>{option}</option>

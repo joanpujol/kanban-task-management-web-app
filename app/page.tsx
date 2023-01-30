@@ -29,7 +29,6 @@ export default function HomePage() {
       <Checkbox />
       <Dropdown
         options={["Todo", "Doing", "Done"]}
-        eventHandler={(value) => console.log(value)}
       />
       <NavigationMenu isActive>+ Create new board</NavigationMenu>
       <NavigationMenu isAction>+ Create new board</NavigationMenu>
