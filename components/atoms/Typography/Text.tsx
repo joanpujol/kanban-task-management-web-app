@@ -5,12 +5,13 @@ type Props = {
   size: Extract<TypographySize, "md" | "lg">;
   bold?: boolean;
   dimmed?: boolean;
+  red?: boolean;
   children: React.ReactNode;
 };
 
-export const Text = ({ size, bold, dimmed, children }: Props) => {
+export const Text = ({ size, bold, dimmed, red, children }: Props) => {
   return (
-    <StyledText $size={size} $bold={bold} $dimmed={dimmed}>
+    <StyledText $size={size} $bold={bold} $dimmed={dimmed} $red={red}>
       {children}
     </StyledText>
   );

@@ -66,6 +66,7 @@ export interface ThemeInterface {
     background: {
       primary: string;
       secondary: string;
+      tertiary: string;
     };
     border: {
       primary: string;
@@ -112,6 +113,7 @@ const lightTheme: ThemeInterface = {
     background: {
       primary: colors.white,
       secondary: colors.lightGrey,
+      tertiary: colors.white,
     },
     border: {
       primary: colors.linesLight,
@@ -146,6 +148,7 @@ const darkTheme: ThemeInterface = {
     background: {
       primary: colors.darkGrey,
       secondary: colors.veryDarkGrey,
+      tertiary: colors.veryDarkGrey,
     },
     border: {
       primary: colors.linesDark,

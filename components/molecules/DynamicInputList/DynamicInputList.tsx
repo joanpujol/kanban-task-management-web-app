@@ -52,7 +52,7 @@ export const DynamicInputList = () => {
         size={"sm"}
         stretch
       >
-        +Add New Subtask
+        + Add New Subtask
       </Button>
     </>
   );

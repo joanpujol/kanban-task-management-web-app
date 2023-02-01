@@ -24,3 +24,9 @@ export const ModalContent = styled.div`
   padding: ${({ theme }) => theme.spacing.xl};
   width: 480px;
 `;
+
+export const ModalHeader = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
