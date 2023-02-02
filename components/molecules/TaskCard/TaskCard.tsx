@@ -14,23 +14,17 @@ type Props = {
 
 export const TaskCard = ({ task }: Props) => {
   const [isTaskModalOpen, setIsTaskModalOpen] = useState(false);
-  const [selectedTask, setSelectedTask] = useState<Task | null>(null);
   return (
     <>
-      <S.TaskCardWrapper
-        onClick={() => {
-          setIsTaskModalOpen(true);
-          setSelectedTask(task);
-        }}
-      >
+      <S.TaskCardWrapper onClick={() => setIsTaskModalOpen(true)}>
         <Header size="md">{task.title}</Header>
         <Text size="md" bold>
           {getTaskStatus(task)}
         </Text>
       </S.TaskCardWrapper>
-      {selectedTask && (
+      {isTaskModalOpen && (
         <ViewTaskModal
-          task={selectedTask}
+          task={task}
           open={isTaskModalOpen}
           setOpen={setIsTaskModalOpen}
         />

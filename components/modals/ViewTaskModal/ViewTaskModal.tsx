@@ -34,8 +34,8 @@ export const ViewTaskModal = ({ task, open, setOpen }: Props) => {
     }),
     shallow
   );
+  const modifiedTask: Task = JSON.parse(JSON.stringify(task));
   const completeSubtask = (title: string, value: boolean) => {
-    const modifiedTask: Task = JSON.parse(JSON.stringify(task));
     const subtaskIndex = modifiedTask.subtasks.findIndex(
       (subtask) => subtask.title === title
     );
@@ -43,13 +43,11 @@ export const ViewTaskModal = ({ task, open, setOpen }: Props) => {
     editTask("Platform Launch", modifiedTask);
   };
   const changeTaskStatus = (status: string) => {
-    const modifiedTask: Task = JSON.parse(JSON.stringify(task));
     modifiedTask.status = status;
     removeTask("Platform Launch", task);
     addNewTask("Platform Launch", modifiedTask);
   };
   const deleteTask = () => {
-    const modifiedTask: Task = JSON.parse(JSON.stringify(task));
     removeTask("Platform Launch", modifiedTask);
     setOpen(false);
   };
