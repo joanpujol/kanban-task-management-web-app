@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Column } from "../../../data/models/Column";
 import Button from "../../atoms/Button/Button";
 import { Header } from "../../atoms/Typography/Header";
-import { AddNewTaskModal } from "../AddNewTaskModal/AddNewTaskModal";
+import { AddNewTaskModal } from "../../modals/AddNewTaskModal/AddNewTaskModal";
 import { Board } from "../../molecules/Board/Board";
 import * as S from "./BoardLayout.styles";
 
@@ -27,7 +27,7 @@ export const BoardLayout = ({ name, columns }: Props) => {
               size={"sm"}
               onClick={() => setIsAddNewTaskModalOpen(true)}
             >
-              +Add New Task
+              + Add New Task
             </Button>
           </S.BoardLayoutHeaderActions>
         </S.BoardLayoutHeader>

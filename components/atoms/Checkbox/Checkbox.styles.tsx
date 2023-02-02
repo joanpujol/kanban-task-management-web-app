@@ -14,34 +14,41 @@ export const CheckboxContainer = styled.div`
   &:hover {
     background: ${({ theme }) => theme.colors.secondaryHover}};
   }
-`
-  
-export const CheckboxSpan = styled.span<{$checked: boolean}>`
-  ${getTextStyles("md")}
+`;
 
-  ${({ $checked, theme: { theme } }) => $checked && `
+export const CheckboxSpan = styled.span<{ $checked: boolean }>`
+  ${getTextStyles("md")}
+  font-weight: 700;
+
+  ${({ $checked, theme: { theme } }) =>
+    $checked &&
+    `
     & {
       color: ${theme.text.primaryDimmed};
       text-decoration-line: line-through;
     }
   `}
-`
+`;
 
-export const StyledCheckbox = styled.div<{$checked: boolean}>`
+export const StyledCheckbox = styled.div<{ $checked: boolean }>`
   display: inline-block;
+  background: ${({ $checked, theme }) =>
+    $checked ? theme.colors.main : theme.colors.white};
+  border-radius: ${({ theme }) => theme.borderRadius.sm};
+  margin-right: ${({ theme }) => theme.spacing.md}};
+  border: 1px solid ${({ theme }) => theme.colors.mediumGreyDimmed};
+`;
+
+export const CheckIconWrapper = styled.div<{ $checked: boolean }>`
   width: 16px;
   height: 16px;
-  background: ${({$checked, theme}) => $checked ? theme.colors.main : theme.colors.white};
-  border-radius: ${({theme}) => theme.borderRadius.sm};
-  margin-right: ${({theme}) => theme.spacing.md}};
-  border: 1px solid ${({theme}) => theme.colors.mediumGreyDimmed};
 
   & > svg {
-    visibility: ${({$checked}) => $checked ? 'visible' : 'hidden'}
+    visibility: ${({ $checked }) => ($checked ? "visible" : "hidden")};
   }
-`
+`;
 
-export const HiddenCheckbox = styled.input.attrs({ type: 'checkbox' })`
+export const HiddenCheckbox = styled.input.attrs({ type: "checkbox" })`
   width: 1px;
   height: 1px;
   margin: -1px;
@@ -52,4 +59,4 @@ export const HiddenCheckbox = styled.input.attrs({ type: 'checkbox' })`
   clippath: inset(50%);
   overflow: hidden;
   white-space: nowrap;
-`
+`;

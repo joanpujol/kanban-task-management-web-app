@@ -2,19 +2,11 @@ import { Task } from "../../../data/models/Task";
 import { useBoardStore } from "../../../data/store/Board.store";
 import Button from "../../atoms/Button/Button";
 import { Dropdown } from "../../atoms/Dropdown/Dropdown";
-import { More } from "../../atoms/Icons/More/More";
 import { Modal } from "../../atoms/Modal/Modal";
 import { TextField } from "../../atoms/TextField/TextField";
 import { Header } from "../../atoms/Typography/Header";
 import { DynamicInputList } from "../../molecules/DynamicInputList/DynamicInputList";
 import { FormItem } from "../../molecules/FormItem/FormItem";
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "../../molecules/Popover/Popover";
-import { Text } from "../../atoms/Typography/Text";
-import { ModalHeader } from "../../atoms/Modal/Modal.styles";
 
 type Props = {
   open: boolean;
@@ -69,19 +61,7 @@ export const AddNewTaskModal = ({ open, setOpen }: Props) => {
   return (
     <Modal open={open} onClose={() => setOpen(false)}>
       <form onSubmit={handleSubmit}>
-        <ModalHeader>
-          <Header size={"xl"}>Add New Task</Header>
-          <Popover>
-            <PopoverTrigger>
-              <More />
-            </PopoverTrigger>
-            <PopoverContent>
-              <Text size="lg" red>
-                Delete Task
-              </Text>
-            </PopoverContent>
-          </Popover>
-        </ModalHeader>
+        <Header size={"xl"}>Add New Task</Header>
         <FormItem name={"title"}>
           <TextField />
         </FormItem>

@@ -6,7 +6,7 @@ type PopoverContextType = {
   setOpen: (open: boolean) => void;
 };
 
-const PopoverContext = createContext({} as PopoverContextType);
+const PopoverContext = createContext<PopoverContextType>({});
 
 type PopoverTriggerProps = {
   children: React.ReactNode;

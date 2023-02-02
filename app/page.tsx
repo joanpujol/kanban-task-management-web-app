@@ -1,7 +1,6 @@
 "use client";
 
 import { Button } from "../components/atoms/Button/Button";
-import Checkbox from "../components/atoms/Checkbox/Checkbox";
 import { Dropdown } from "../components/atoms/Dropdown/Dropdown";
 import { NavigationMenu } from "../components/atoms/NavigationMenu/NavigationMenu";
 import { Text } from "../components/atoms/Typography/Text";
@@ -26,7 +25,6 @@ export default function HomePage() {
         Hello
       </Text>
       <Text size="md">Hello</Text>
-      <Checkbox />
       <Dropdown
         options={["Todo", "Doing", "Done"]}
       />
